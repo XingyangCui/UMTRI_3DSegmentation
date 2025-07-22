@@ -51,7 +51,8 @@ These tools are required for visualization and mesh editing:
 
 
 
-
+-
+-
 # 🚀 Run Segmentation Pipeline (nnU-Net based)
 
 This section explains how to train and evaluate our segmentation model using [nnU-Net](https://github.com/MIC-DKFZ/nnUNet).
