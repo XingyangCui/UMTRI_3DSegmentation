@@ -67,12 +67,11 @@ Follow the official nnU-Net installation guide:
 
 ### 📁 Step 2: Convert the Dataset to nnU-Net Format
 
-At first you need to have a plan with the data, like which should be the training or testing datasets. There have to create a csv file named meta.csv
-it structure is like this:
+At first you need to have a plan with the data, like which should be the training or testing datasets. There have to create a csv file named meta.csv.
+This file contains metadata for all image samples used in this project. Each row corresponds to a single 3D medical image, with optional attributes that may be used for analysis, filtering, or stratification:
+<img src="Images/1.png" alt="Example Image" width="600"/>
 
-<img src="Images/1.png" alt="Example Image" width="700"/>
 
-The meta.csv file contains metadata for all image samples used in this project. Each row corresponds to a single 3D medical image, with optional attributes that may be used for analysis, filtering, or stratification.
 
 *** 🧷 Required Columns
 Column Name	Description
@@ -134,15 +133,46 @@ nnUNet_raw/Dataset001_BrainTumour/
     ├── BRATS_002.nii.gz
     ├── ...
 ```
+After split the data successfully, you can move to the next step.
 
 
 ### ⚙️ Step 3: Preprocess the Dataset
 
 Use the nnU-Net preprocessing tool:
-
 ```bash
 nnUNetv2_plan_and_preprocess -d <your_dataset_id> -pl ExperimentPlanner -c 3d_fullres -np 2
 ```
+[Preprocess Code](https://github.com/XingyangCui/UMTRI_3D_Segmentation/blob/main/Code/Preprocess.ipynb)
+
+To run data preprocessing with nnUNetv2, you need to set up the environment paths and execute the planning and preprocessing pipeline for your dataset.
+
+✅ 1. Set Environment Variables
+```bash
+import os
+
+os.environ["nnUNet_raw"] = "your/path/to/raw_data"                # Folder containing your DatasetXXX folder
+os.environ["nnUNet_preprocessed"] = "your/path/to/preprocessed"  # Where preprocessed data will be stored
+os.environ["nnUNet_results"] = "your/path/to/results"            # Directory for trained models and logs
+```
+
+✅ 2. Preprocess code
+```bash
+# Optional environment settings to avoid locale errors
+env_vars = {
+    "LC_ALL": "C.UTF-8",
+    "LANG": "C.UTF-8"
+}
+
+# Build the nnU-Net planning command
+command = [
+    "nnUNetv2_plan_and_preprocess",
+    "-d", "001",      # Replace with your Dataset ID (e.g., 001, 002, etc.)
+    "-np", "6"        # Number of preprocessing threads (adjust to your CPU)
+]
+```
+### Run the command with both system and custom environment variables
+subprocess.run(command, env={**env_vars, **dict(os.environ)}, text=True)
+
 
 ### 🧠 Step 4: Train the Model
 
