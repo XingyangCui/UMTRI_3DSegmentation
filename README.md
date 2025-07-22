@@ -26,7 +26,7 @@ If you use the option `--preview`, install:
 ```bash
 sudo apt-get install xvfb
 pip install fury
-
+```
 
 
 
