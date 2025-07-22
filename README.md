@@ -5,8 +5,8 @@ It was trained on a wide range of different CT and MR images (different scanners
 and therefore works well on most images.
 
 A large part of the training dataset can be downloaded here:  
-- CT dataset (1228 subjects)  
-- MR dataset (616 subjects)
+- Ribcage dataset (1228 subjects)  
+- [Foot & Ankle dataset](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data) (616 subjects)
 
 You can also try the tool online at [totalsegmentator.com](https://www.totalsegmentator.com) or as a 3D Slicer extension.
 
