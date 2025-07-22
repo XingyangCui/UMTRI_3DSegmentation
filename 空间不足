@@ -1,0 +1,17 @@
+du -sh ~/*
+
+2. 查 .local 目录下的占用
+du -sh ~/.local/*
+
+.local/share 占用了 16GB
+进一步查看：
+du -sh ~/.local/share/*
+
+清空回收站以释放空间
+rm -rf ~/.local/share/Trash/*
+
+
+.cache 目录清理步骤
+du -sh ~/.cache/* | sort -hr | head -20
+rm -rf ~/.cache/*
+
