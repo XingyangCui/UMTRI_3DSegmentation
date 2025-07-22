@@ -49,7 +49,10 @@ These tools are required for visualization and mesh editing:
 – Tool for editing and visualizing 3D meshes for the STL version [Instruction](https://github.com/XingyangCui/UMTRI_3D_Segmentation/blob/main/MeshLab_Instruction)
 
 
-## 🚀 Run Segmentation Pipeline (nnU-Net based)
+
+
+
+# 🚀 Run Segmentation Pipeline (nnU-Net based)
 
 This section explains how to train and evaluate our segmentation model using [nnU-Net](https://github.com/MIC-DKFZ/nnUNet).
 
