@@ -40,6 +40,8 @@ You can download the raw data from the following link:
 
 👉 [Download Raw Data](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data)
 
+[link](https://chatgpt.com/c/687ed90b-31fc-800a-a714-d39a3cbbb58d)
+
 > Note: Make sure you have access to the UMich Turbo storage system.
 
 
