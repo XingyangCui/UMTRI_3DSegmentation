@@ -42,11 +42,11 @@ Here is the instruction of how to run our basic segmentation model based on nnun
 ### Step 3: Install Required CT Software(3D Slicer & MeshLab)
 These tools are required for visualization and mesh editing:
 
-🧰 3D Slicer – Open-source platform for medical image computing, mainly used to view `.nii.gz` CT images and 3D segmentation results  
-[🔗 Download 3D Slicer](https://www.meshlab.net/)             [Instruction](https://github.com/XingyangCui/UMTRI_3D_Segmentation/blob/main/3D_Slicer_Instruction)
+🧰 3D Slicer [🔗 Download 3D Slicer](https://www.meshlab.net/)            
+– Open-source platform for medical image computing, mainly used to view `.nii.gz` CT images and 3D segmentation results [Instruction](https://github.com/XingyangCui/UMTRI_3D_Segmentation/blob/main/3D_Slicer_Instruction)
 
-🧱 MeshLab – Tool for editing and visualizing 3D meshes for the STL version
-[🔗 Download MeshLab](https://www.slicer.org/)               [Instruction](https://github.com/XingyangCui/UMTRI_3D_Segmentation/blob/main/MeshLab_Instruction)
+🧱 MeshLab [🔗 Download MeshLab](https://www.slicer.org/)    
+– Tool for editing and visualizing 3D meshes for the STL version [Instruction](https://github.com/XingyangCui/UMTRI_3D_Segmentation/blob/main/MeshLab_Instruction)
 
 
 ## 🚀 Run Segmentation Pipeline (nnU-Net based)
