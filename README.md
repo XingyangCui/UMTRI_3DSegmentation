@@ -1,2 +1,2 @@
 # UMTRI_3DSegmentation
-For the description related to 3D segmentation by Nn-unet and the procedure to run the code
+Tool for segmentation of most major anatomical structures in any CT or MR image. It was trained on a wide range of different CT and MR images (different scanners, institutions, protocols,...) and therefore works well on most images. A large part of the training dataset can be downloaded here: CT dataset (1228 subjects) and MR dataset (616 subjects). You can also try the tool online at totalsegmentator.com or as 3D Slicer extension.
