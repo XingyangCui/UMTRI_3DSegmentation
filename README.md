@@ -67,20 +67,57 @@ Follow the official nnU-Net installation guide:
 
 ### 📁 Step 2: Convert the Dataset to nnU-Net Format
 
-Use the provided script:
+At first you need to have a plan with the data, like which should be the training or testing datasets. There have to create a csv file named meta.csv
+it structure is like this:
+![Example Image](images/your_image.png)
 
+
+
+Use the provided script:
 ```bash
 python resources/convert_dataset_to_nnunet.py
 ```
 For the dataset format, you can refer to the instruction [here](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md)
-Usually it contain 4 parts:
+Usually the split results contain 5 parts: 
 ```
 Dataset001_BrainTumour/
 ├── dataset.json
 ├── imagesTr
 ├── imagesTs  # optional
 └── labelsTr
+└── labelsTs  # optional
 ```
+
+and this is how the details look like:
+```
+nnUNet_raw/Dataset001_BrainTumour/
+├── dataset.json
+├── imagesTr
+│   ├── BRATS_001_0000.nii.gz
+│   ├── BRATS_001_0001.nii.gz
+│   ├── BRATS_001_0002.nii.gz
+│   ├── BRATS_001_0003.nii.gz
+│   ├── BRATS_002_0000.nii.gz
+│   ├── BRATS_002_0001.nii.gz
+│   ├── BRATS_002_0002.nii.gz
+│   ├── BRATS_002_0003.nii.gz
+│   ├── ...
+├── imagesTs
+│   ├── BRATS_485_0000.nii.gz
+│   ├── BRATS_485_0001.nii.gz
+│   ├── BRATS_485_0002.nii.gz
+│   ├── BRATS_485_0003.nii.gz
+│   ├── BRATS_486_0000.nii.gz
+│   ├── BRATS_486_0001.nii.gz
+│   ├── BRATS_486_0002.nii.gz
+│   ├── BRATS_486_0003.nii.gz
+│   ├── ...
+└── labelsTr
+    ├── BRATS_001.nii.gz
+    ├── BRATS_002.nii.gz
+    ├── ...
+```
+
 
 ### ⚙️ Step 3: Preprocess the Dataset
 
