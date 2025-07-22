@@ -69,7 +69,24 @@ Follow the official nnU-Net installation guide:
 
 At first you need to have a plan with the data, like which should be the training or testing datasets. There have to create a csv file named meta.csv
 it structure is like this:
+
 <img src="Images/1.png" alt="Example Image" width="700"/>
+
+The meta.csv file contains metadata for all image samples used in this project. Each row corresponds to a single 3D medical image, with optional attributes that may be used for analysis, filtering, or stratification.
+
+*** 🧷 Required Columns
+Column Name	Description
+image_id	(Required) Unique identifier for each image. This must match the folder or file name used for segmentation.
+split	(Required) Dataset split assignment. Must be one of: train, val, or test.
+
+🧩 Optional Columns
+Column Name	Description
+age	Age of the subject in years. Useful for age-based analysis.
+gender	Gender of the subject, typically M or F.
+institute	Source institution or hospital where the image was acquired.
+study_type	Region of interest or scan type (e.g., brain, chest, abdomen).
+
+>⚠️ Note: Only image_id and split are required for the pipeline to run. Other columns are optional and may contain missing or noisy entries. For example, some study_type values may require cleaning (e.g., correcting typos like chec → chest).
 
 
 
