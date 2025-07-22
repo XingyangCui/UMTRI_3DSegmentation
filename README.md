@@ -1,53 +1,56 @@
-# UMTRI_3D_Segmentation
+# 🧠 UMTRI_3D_Segmentation
 
-Tool for segmentation of most major anatomical structures in any CT or MR image.  
-It was trained on a wide range of different CT and MR images (different scanners, institutions, protocols,...)  
-and therefore works well on most images.
+A pipeline for segmentation of major anatomical structures in CT and MR images.  
+This tool is trained on a wide variety of CT and MR scans from different institutions, scanners, and protocols, allowing it to generalize well to diverse inputs.
 
+---
 
-## 🛠️ Tools Installation
+## 📂 Datasets
 
-TotalSegmentator works on Ubuntu, Mac, and Windows, and supports both CPU and GPU.
+We use two key datasets in this project:
 
-### ✅ Install dependencies:
+- 🦴 [Ribcage dataset (156 subjects)](https://www.dropbox.com/home/Xingyang%20Cui/TotalSegmentator_FineTuning)
+- 🦶 [Foot & Ankle dataset (78 subjects)](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data)
 
+> ⚠️ *Note: The Foot & Ankle dataset is stored on UMich's ARC Turbo system. Please ensure you have access and are connected to the UMich network.*
 
-### Step 1: Download Python Environment
+---
+
+## 🛠️ Installation Instructions
+
+TotalSegmentator runs on **Ubuntu, Mac, and Windows**, and supports both **CPU** and **GPU** environments.
+
+### ✅ Step 1: Set Up Python Environment
+
 - Python >= 3.9  
 - PyTorch >= 2.0.0 and < 2.6.0 (`< 2.4` for Windows)
 
-**Optional:**  
-If you use the option `--preview`, install:
+Optional dependencies for preview rendering:
+
 ```bash
 sudo apt-get install xvfb
 pip install fury
 ```
 
+### ✅ Step 2: Install TotalSegmentator
+```bash
+pip install TotalSegmentator
+```
 Here is the instruction of how to run our basic segmentation model based on nnunet.
 
 
 
 
-### Step 2: Download the Data
+### Step 3: Install Required CT Software(3D Slicer & MeshLab)
+These tools are required for visualization and mesh editing:
 
-You can download the raw data from the following link:
+🧰 3D Slicer – Open-source platform for medical image computing
+[🔗 Download 3D Slicer](https://www.meshlab.net/)
 
-A large part of the training dataset can be downloaded here:  
-- [Ribcage dataset](https://www.dropbox.com/home/Xingyang%20Cui/TotalSegmentator_FineTuning) (156 subjects)  
-- [Foot & Ankle dataset](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data) (78 subjects)
-
-> Note: Make sure you have access to the UMich Turbo storage system.
+🧱 MeshLab – Tool for editing and visualizing 3D meshes
 
 
-
-### Step 3: Download Madatory CT Software(3D Slicer & MeshLab)
-
-3D Slicer : intro
-[Download link](https://www.meshlab.net/)
-
-
-Meshlab : intro
-[Download link](https://www.slicer.org/)
+[🔗 Download MeshLab](https://www.slicer.org/)
 
 
 the DataConvert the data to nnU-Net format using resources/convert_dataset_to_nnunet.py (see resources/train_nnunet.sh for usage example)
