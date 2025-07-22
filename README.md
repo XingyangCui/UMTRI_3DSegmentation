@@ -173,7 +173,35 @@ command = [
 ### Run the command with both system and custom environment variables
 subprocess.run(command, env={**env_vars, **dict(os.environ)}, text=True)
 
-### 🧠 Step 4: Cropped Data
+### 🧠 Step 4: Cropped Data(not mandatory)
+Sometimes the images is too big that will cause system shut down due to lack of space. So it's critical to cut the whole body images into the part you need only.
+Forexample for the Foot&Ankle data, we only need the second half of the body, but the CT Scans is look like this:
+<img src="Images/2.png" alt="Example Image" width="600"/>
+
+We need to tur it into and then taining:
+<img src="Images/3.png" alt="Example Image" width="600"/>
+
+
+[Cropped Code](https://github.com/XingyangCui/UMTRI_3D_Segmentation/blob/main/Code/Cropped.ipynb)
+🛠️ Features
+Batch processing: Automatically loops over patient IDs.
+Orientation-aware cropping: Determines cropping direction based on the affine matrix.
+Safe I/O: Skips missing files and handles exceptions.
+Output management: Saves cropped files to a subdirectory named test/.
+
+**** Suppose your dataset includes full-foot CT volumes like:
+```bash
+LM7100_resampled.nii.gz
+LM7101_resampled.nii.gz
+```
+
+This script will:
+- Load each file
+- Crop it along the Z-axis (keeping either top or bottom half)
+- Save the result as:
+```bash
+LM7100_cropped.nii.gz → in /test/ subfolder
+```
 
 
 ### 🧠 Step 5: Train the Model
