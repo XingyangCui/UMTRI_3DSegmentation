@@ -173,8 +173,10 @@ command = [
 ### Run the command with both system and custom environment variables
 subprocess.run(command, env={**env_vars, **dict(os.environ)}, text=True)
 
+### 🧠 Step 4: Cropped Data
 
-### 🧠 Step 4: Train the Model
+
+### 🧠 Step 5: Train the Model
 
 Use the `nnUNetTrainerNoMirroring` trainer to start training:
 
@@ -191,7 +193,7 @@ nnUNetv2_train <your_dataset_id> 3d_fullres 0 -tr nnUNetTrainerNoMirroring
 
 ⏱️ Training may take several days depending on your hardware setup.
 
-### 🔍 Step 5: Predict on the Test Set
+### 🔍 Step 6: Predict on the Test Set
 
 Use the trained nnU-Net model to predict segmentations on the test set:
 
@@ -218,7 +220,7 @@ nnUNetv2_predict -i path/to/imagesTs \
 * -f 0: Predict with fold 0
 
 
-### 📊 Step 6: Evaluate Predictions
+### 📊 Step 7: Evaluate Predictions
 
 To evaluate the predicted segmentation results against ground truth labels, follow the steps below.
 
@@ -238,7 +240,7 @@ This script will compute surface-based Dice scores and other metrics.
 📄 Results can be compared with the baseline in resources/evaluate_results.txt
 🎯 Note: Due to non-deterministic training, average Dice scores may vary by approximately ±1 point.
 
-### 📊 Step 7: Done!!!
+### 📊 Step 8: Done!!!
 
 > Note: This will not give you the same results as 3D sgementation for two reasons:
 1. 3D segmentation uses a bigger dataset which is not completely public
