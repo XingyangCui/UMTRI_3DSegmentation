@@ -34,8 +34,14 @@ Here is the instruction of how to run our basic segmentation model based on nnun
 
 1. Setup nnU-Net as described here
 
-2. Download the data
-```python
+### Step 2: Download the Data
+
+You can download the raw data from the following link:
+
+👉 [Download Raw Data](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data)
+
+> Note: Make sure you have access to the UMich Turbo storage system.
+
 
 3. Convert the data to nnU-Net format using resources/convert_dataset_to_nnunet.py (see resources/train_nnunet.sh for usage example)
 
