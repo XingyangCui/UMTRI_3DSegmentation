@@ -25,13 +25,12 @@ TotalSegmentator runs on **Ubuntu, Mac, and Windows**, and supports both **CPU**
 
 - Python >= 3.9  
 - PyTorch >= 2.0.0 and < 2.6.0 (`< 2.4` for Windows)
-
-Optional dependencies for preview rendering:
-
 ```bash
-sudo apt-get install xvfb
-pip install fury
+Optionally:
 ```
+if you use the option --preview you have to install xvfb (apt-get install xvfb) and fury (pip install fury)
+
+Install Totalsegmentator
 
 ### ✅ Step 2: Install TotalSegmentator
 ```bash
