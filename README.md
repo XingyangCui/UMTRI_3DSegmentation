@@ -69,7 +69,7 @@ Follow the official nnU-Net installation guide:
 
 At first you need to have a plan with the data, like which should be the training or testing datasets. There have to create a csv file named meta.csv
 it structure is like this:
-![Example Image](images/your_image.png)
+![Example Image](Images/1.png)
 
 
 
