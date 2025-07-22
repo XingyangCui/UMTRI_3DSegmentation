@@ -7,10 +7,11 @@ This tool is trained on a wide variety of CT and MR scans from different institu
 
 ## 📂 Datasets
 
-We use two key datasets in this project:
+Currently We use two key datasets in this project:
 
 - 🦴 [Ribcage dataset (156 subjects)](https://www.dropbox.com/home/Xingyang%20Cui/TotalSegmentator_FineTuning)
 - 🦶 [Foot & Ankle dataset (78 subjects)](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data)
+- [All other data(Hand, Neck, Cadaver etc)](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing)
 
 > ⚠️ *Note: The Foot & Ankle dataset is stored on UMich's ARC Turbo system. Please ensure you have access and are connected to the UMich network.*
 
