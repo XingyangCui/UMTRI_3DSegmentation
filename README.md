@@ -12,5 +12,5 @@ Optionally:
 
 if you use the option --preview you have to install xvfb (apt-get install xvfb) and fury (pip install fury)
 Install Totalsegmentator
-
+```python
 pip install TotalSegmentator
