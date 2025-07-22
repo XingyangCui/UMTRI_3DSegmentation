@@ -37,8 +37,6 @@ pip install TotalSegmentator
 Here is the instruction of how to run our basic segmentation model based on nnunet.
 
 
-
-
 ### Step 3: Install Required CT Software(3D Slicer & MeshLab)
 These tools are required for visualization and mesh editing:
 
@@ -51,6 +49,7 @@ These tools are required for visualization and mesh editing:
 
 
 
+-
 -
 -
 # 🚀 Run Segmentation Pipeline (nnU-Net based)
@@ -73,6 +72,15 @@ Use the provided script:
 ```bash
 python resources/convert_dataset_to_nnunet.py
 ```
+For the dataset format, you can refer to the instruction [here](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md)
+Usually it contain 4 parts:
+'''
+Dataset001_BrainTumour/
+├── dataset.json
+├── imagesTr
+├── imagesTs  # optional
+└── labelsTr
+'''
 
 ### ⚙️ Step 3: Preprocess the Dataset
 
