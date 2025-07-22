@@ -148,5 +148,5 @@ This script will compute surface-based Dice scores and other metrics.
 ### 📊 Step 7: Done!!!
 
 > Note: This will not give you the same results as 3D sgementation for two reasons:
-3D segmentation uses a bigger dataset which is not completely public
-The origional model parameters use for training is different.
+1. 3D segmentation uses a bigger dataset which is not completely public
+2. The origional model parameters use for training is different.
