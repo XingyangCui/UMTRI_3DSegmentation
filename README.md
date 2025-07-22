@@ -45,6 +45,8 @@ These tools are required for visualization and mesh editing:
 🧰 3D Slicer – Open-source platform for medical image computing, mainly used to view `.nii.gz` CT images and 3D segmentation results  
 [🔗 Download 3D Slicer](https://www.meshlab.net/)
 
+[Instruction]()
+
 🧱 MeshLab – Tool for editing and visualizing 3D meshes for the STL version
 [🔗 Download MeshLab](https://www.slicer.org/)
 
