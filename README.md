@@ -1,11 +1,11 @@
-# UMTRI_3DSegmentation
+# UMTRI_3D_Segmentation
 
 Tool for segmentation of most major anatomical structures in any CT or MR image.  
 It was trained on a wide range of different CT and MR images (different scanners, institutions, protocols,...)  
 and therefore works well on most images.
 
 A large part of the training dataset can be downloaded here:  
-- [Ribcage dataset](https://www.dropbox.com/home/Xingyang%20Cui/TotalSegmentator_FineTuning) ( subjects)  
+- [Ribcage dataset](https://www.dropbox.com/home/Xingyang%20Cui/TotalSegmentator_FineTuning) (156 subjects)  
 - [Foot & Ankle dataset](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data) (78 subjects)
 
 You can also try the tool online at [totalsegmentator.com](https://www.totalsegmentator.com) or as a 3D Slicer extension.
