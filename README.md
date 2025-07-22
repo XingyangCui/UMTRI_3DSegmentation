@@ -4,20 +4,15 @@ Tool for segmentation of most major anatomical structures in any CT or MR image.
 It was trained on a wide range of different CT and MR images (different scanners, institutions, protocols,...)  
 and therefore works well on most images.
 
-A large part of the training dataset can be downloaded here:  
-- [Ribcage dataset](https://www.dropbox.com/home/Xingyang%20Cui/TotalSegmentator_FineTuning) (156 subjects)  
-- [Foot & Ankle dataset](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data) (78 subjects)
 
-You can also try the tool online at [totalsegmentator.com](https://www.totalsegmentator.com) or as a 3D Slicer extension.
-
----
-
-## 🛠️ Installation
+## 🛠️ Tools Installation
 
 TotalSegmentator works on Ubuntu, Mac, and Windows, and supports both CPU and GPU.
 
 ### ✅ Install dependencies:
 
+
+### Step 1: Download Python Environment
 - Python >= 3.9  
 - PyTorch >= 2.0.0 and < 2.6.0 (`< 2.4` for Windows)
 
@@ -28,24 +23,34 @@ sudo apt-get install xvfb
 pip install fury
 ```
 
-
-
 Here is the instruction of how to run our basic segmentation model based on nnunet.
 
-1. Setup nnU-Net as described here
+
+
 
 ### Step 2: Download the Data
 
 You can download the raw data from the following link:
 
-👉 [Download Raw Data](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data)
-
-[link](https://chatgpt.com/c/687ed90b-31fc-800a-a714-d39a3cbbb58d)
+A large part of the training dataset can be downloaded here:  
+- [Ribcage dataset](https://www.dropbox.com/home/Xingyang%20Cui/TotalSegmentator_FineTuning) (156 subjects)  
+- [Foot & Ankle dataset](https://armis2.arc-ts.umich.edu/pun/sys/dashboard/files/fs//nfs/turbo/coe-mreedsensitive/Processing/Foot_and_Ankle/SK/Raw_Data) (78 subjects)
 
 > Note: Make sure you have access to the UMich Turbo storage system.
 
 
-3. Convert the data to nnU-Net format using resources/convert_dataset_to_nnunet.py (see resources/train_nnunet.sh for usage example)
+
+### Step 3: Download Madatory CT Software(3D Slicer & MeshLab)
+
+3D Slicer : intro
+[Download link](https://www.meshlab.net/)
+
+
+Meshlab : intro
+[Download link](https://www.slicer.org/)
+
+
+the DataConvert the data to nnU-Net format using resources/convert_dataset_to_nnunet.py (see resources/train_nnunet.sh for usage example)
 
 4. Preprocess nnUNetv2_plan_and_preprocess -d <your_dataset_id> -pl ExperimentPlanner -c 3d_fullres -np 2
 ```python
