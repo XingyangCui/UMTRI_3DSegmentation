@@ -1,4 +1,4 @@
-# 🧠 UMTRI_Seg3D
+# 🧠 UMTRI_3D_Segmentation
 
 A pipeline for segmentation of major anatomical structures in CT and MR images.  
 This tool is trained on a wide variety of CT and MR scans from different institutions, scanners, and protocols, allowing it to generalize well to diverse inputs.
