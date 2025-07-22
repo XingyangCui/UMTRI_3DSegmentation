@@ -74,13 +74,13 @@ python resources/convert_dataset_to_nnunet.py
 ```
 For the dataset format, you can refer to the instruction [here](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/dataset_format.md)
 Usually it contain 4 parts:
-'''
+```
 Dataset001_BrainTumour/
 ├── dataset.json
 ├── imagesTr
 ├── imagesTs  # optional
 └── labelsTr
-'''
+```
 
 ### ⚙️ Step 3: Preprocess the Dataset
 
