@@ -30,11 +30,6 @@ Optionally:
 * if you use the option --preview you have to install xvfb (apt-get install xvfb) and fury (pip install fury)
 
 
-Install Totalsegmentator
-```bash
-pip install TotalSegmentator
-```
-
 ### ✅ Step 2: Install TotalSegmentator
 ```bash
 pip install TotalSegmentator
